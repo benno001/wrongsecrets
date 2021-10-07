@@ -27,6 +27,10 @@ resource "aws_default_subnet" "default_az2" {
   availability_zone = "${var.region}b"
 }
 
+resource "aws_default_subnet" "default_az3" {
+  availability_zone = "${var.region}c"
+}
+
 module "eks" {
   source = "terraform-aws-modules/eks/aws"
 
